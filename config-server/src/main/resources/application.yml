@@ -1,0 +1,19 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8888
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/gudanrenao/SpringcloudConfig/ #git仓库地址
+          search-paths: respo #仓库路径
+          #Git仓库为公开仓库，可以不填写用户名和密码，如果是私有仓库需要填写
+          username:
+          password:
+          default-label: master #配置仓库的分支
